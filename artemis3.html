@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artemis III | Mission Article</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="article-page">
+    <div class="page-switcher">
+      <label class="switcher-label" for="pageSelect">Articles</label>
+      <select id="pageSelect" class="page-select">
+        <option value="index.html">Home overview</option>
+        <option value="artemis1.html">Artemis I article</option>
+        <option value="artemis2.html">Artemis II article</option>
+        <option value="artemis3.html" selected>Artemis III article</option>
+      </select>
+    </div>
+
+    <main class="shell article-layout">
+      <article class="article-card article-card-full reveal">
+        <span class="article-tag">Artemis III</span>
+        <h1 class="article-title">Artemis III is the point where separate systems have to act like one mission network.</h1>
+        <p class="article-lede">
+          NASA's Artemis III mission page currently points to a 2027 mission centered on integrated
+          operations with commercial spacecraft, making it one of the program's most important next steps.
+        </p>
+        <figure class="article-media">
+          <img src="assets/artemis1.jpg" alt="Artemis campaign launch visual" class="article-image" />
+          <figcaption>Artemis III is about integrated operations, so this page focuses on architecture and coordination as much as launch energy.</figcaption>
+        </figure>
+        <div class="article-stats">
+          <div class="article-stat"><span>Target</span><strong>2027</strong></div>
+          <div class="article-stat"><span>Mission type</span><strong>Integrated ops</strong></div>
+          <div class="article-stat"><span>Focus</span><strong>Docking and coordination</strong></div>
+        </div>
+        <section class="article-explorer">
+          <div class="chip-row">
+            <button class="chip explorer-button active" data-title-target="a3Title" data-body-target="a3Body" data-panel-title="Why Artemis III stands out" data-panel-body="Artemis III is where the program begins acting like a larger exploration system rather than a sequence of disconnected launches.">Why it stands out</button>
+            <button class="chip explorer-button" data-title-target="a3Title" data-body-target="a3Body" data-panel-title="What is different" data-panel-body="Its focus on rendezvous and docking with commercial spacecraft shifts the challenge from single-vehicle performance to mission integration and coordination.">What is different</button>
+            <button class="chip explorer-button" data-title-target="a3Title" data-body-target="a3Body" data-panel-title="Why it matters next" data-panel-body="If Artemis III's integrated operations work well, the Artemis campaign becomes much more believable as a sustained exploration architecture rather than a one-off demonstration series.">Why it matters next</button>
+          </div>
+          <div class="detail-box">
+            <h3 id="a3Title">Why Artemis III stands out</h3>
+            <p id="a3Body">Artemis III is where the program begins acting like a larger exploration system rather than a sequence of disconnected launches.</p>
+          </div>
+        </section>
+        <div class="article-body">
+          <p>
+            Artemis III matters because it shifts the story from basic flight confidence into mission
+            integration. That means NASA hardware, partner systems, operations planning, and future
+            exploration goals all start depending on one another more directly.
+          </p>
+          <p>
+            Missions like Artemis III are where exploration programs become architecture instead of a
+            sequence of isolated launches. The challenge is no longer only whether a single vehicle can
+            fly. It becomes whether multiple vehicles, timelines, and teams can function together as a
+            repeatable exploration system.
+          </p>
+          <p>
+            That is why Artemis III is watched so closely. It represents the move from demonstration
+            success toward sustained lunar capability, which is the larger point of Artemis in the first
+            place.
+          </p>
+        </div>
+      </article>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

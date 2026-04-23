@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artemis I | Mission Article</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="article-page">
+    <div class="page-switcher">
+      <label class="switcher-label" for="pageSelect">Articles</label>
+      <select id="pageSelect" class="page-select">
+        <option value="index.html">Home overview</option>
+        <option value="artemis1.html" selected>Artemis I article</option>
+        <option value="artemis2.html">Artemis II article</option>
+        <option value="artemis3.html">Artemis III article</option>
+      </select>
+    </div>
+
+    <main class="shell article-layout">
+      <article class="article-card article-card-full reveal">
+        <span class="article-tag">Artemis I</span>
+        <h1 class="article-title">The uncrewed mission that proved the Artemis stack could really fly.</h1>
+        <p class="article-lede">
+          Artemis I was NASA's first full mission test of the Space Launch System rocket, Orion
+          spacecraft, and the ground systems needed to launch and recover them. It launched on
+          November 16, 2022 and returned on December 11, 2022 after a deep-space trip around the Moon.
+        </p>
+        <figure class="article-media">
+          <img src="assets/artemis1.jpg" alt="Artemis I launch imagery" class="article-image" />
+          <figcaption>Artemis I validated the full launch, lunar flight, and return sequence before NASA flew crew.</figcaption>
+        </figure>
+        <div class="article-stats">
+          <div class="article-stat"><span>Launch</span><strong>Nov. 16, 2022</strong></div>
+          <div class="article-stat"><span>Duration</span><strong>25 days</strong></div>
+          <div class="article-stat"><span>Distance</span><strong>1.4 million miles</strong></div>
+        </div>
+        <section class="article-explorer">
+          <div class="chip-row">
+            <button class="chip explorer-button active" data-title-target="a1Title" data-body-target="a1Body" data-panel-title="Why Artemis I mattered" data-panel-body="Artemis I was the first end-to-end systems test for SLS, Orion, and recovery operations, proving the hardware could work together in real flight.">Why it mattered</button>
+            <button class="chip explorer-button" data-title-target="a1Title" data-body-target="a1Body" data-panel-title="What NASA learned" data-panel-body="NASA gathered real flight data on launch loads, deep-space navigation, thermal protection, communication performance, and splashdown recovery before sending astronauts on Artemis II.">What NASA learned</button>
+            <button class="chip explorer-button" data-title-target="a1Title" data-body-target="a1Body" data-panel-title="What Artemis I unlocked" data-panel-body="By returning safely from the Moon, Artemis I turned years of testing into mission confidence and cleared the way for the crewed lunar flyby of Artemis II.">What it unlocked</button>
+          </div>
+          <div class="detail-box">
+            <h3 id="a1Title">Why Artemis I mattered</h3>
+            <p id="a1Body">Artemis I was the first end-to-end systems test for SLS, Orion, and recovery operations, proving the hardware could work together in real flight.</p>
+          </div>
+        </section>
+        <div class="article-body">
+          <p>
+            In simple terms, Artemis I was the dress rehearsal for everything that had to work before
+            astronauts could ride on Artemis II. NASA used the mission to check whether Orion could
+            survive launch, operate for weeks in deep space, communicate over long distances, and
+            re-enter Earth's atmosphere at lunar-return speeds.
+          </p>
+          <p>
+            The mission also mattered politically and technically because Artemis is not built around
+            one dramatic launch. It is a campaign. Artemis I gave NASA the first hard mission data
+            point for that campaign and turned years of design and ground testing into a real flight
+            record.
+          </p>
+          <p>
+            By coming home safely, Artemis I gave NASA the confidence to move from hardware validation
+            into human operations. That is why Artemis I remains one of the most important missions in
+            the whole Moon-to-Mars roadmap, even though no crew flew on it.
+          </p>
+        </div>
+      </article>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

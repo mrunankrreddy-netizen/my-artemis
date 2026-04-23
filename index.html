@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artemis | NASA Mission Snapshot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-switcher">
+      <label class="switcher-label" for="pageSelect">Articles</label>
+      <select id="pageSelect" class="page-select">
+        <option value="index.html">Home overview</option>
+        <option value="artemis1.html">Artemis I article</option>
+        <option value="artemis2.html">Artemis II article</option>
+        <option value="artemis3.html">Artemis III article</option>
+      </select>
+    </div>
+
+    <div class="bg-orbit orbit-a"></div>
+    <div class="bg-orbit orbit-b"></div>
+    <section class="scene">
+      <div class="scene-sticky">
+        <div class="scene-shell">
+          <div class="scene-stage" aria-hidden="true">
+            <div class="scene-video-shell">
+              <video
+                class="scene-video"
+                id="launchClip"
+                playsinline
+                muted
+                autoplay
+                preload="auto"
+                src="assets/artemis-liftoff.mp4#t=0,3"
+              ></video>
+              <div class="scroll-cue">
+                <span class="scroll-cue-text">Scroll down</span>
+                <div class="scroll-cue-arrows" aria-hidden="true">
+                  <span class="scroll-arrow"></span>
+                  <span class="scroll-arrow"></span>
+                  <span class="scroll-arrow"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <header class="hero shell" id="briefing">
+      <nav class="topbar topbar-secondary">
+        <div class="brand">
+          <span class="brand-mark"></span>
+          <span>Mission Brief</span>
+        </div>
+        <a class="nav-link" href="#missions">Mission View</a>
+      </nav>
+      <div class="hero-grid">
+        <section class="hero-copy reveal">
+          <p class="eyebrow">NASA lunar campaign</p>
+          <h1>Artemis is NASA's long-run plan to return humans to the Moon and prepare for Mars.</h1>
+          <p class="lede">
+            This page gives a simple overview of the Artemis program with a few interactive ways to
+            explore where the mission stands now.
+          </p>
+
+          <div class="hero-actions">
+            <button class="primary-btn" id="focusArtemis2">Focus on Artemis II</button>
+            <button class="ghost-btn" id="toggleFacts">Surprise me with a fact</button>
+          </div>
+
+          <div class="fact-chip" id="factChip" aria-live="polite">
+            Artemis connects the Orion spacecraft, the SLS rocket, lunar landers, and Gateway.
+          </div>
+        </section>
+
+        <aside class="status-panel reveal delay-1">
+          <div class="status-card">
+            <p class="status-label">Mission pulse</p>
+            <h2 id="missionTitle">Artemis II</h2>
+            <p id="missionSummary">
+              The first crewed Artemis flight, built to validate deep-space systems around the Moon.
+            </p>
+
+            <div class="stat-grid">
+              <div>
+                <span class="stat-kicker">Status</span>
+                <strong id="missionStatus">Completed April 2026</strong>
+              </div>
+              <div>
+                <span class="stat-kicker">Destination</span>
+                <strong id="missionDestination">Crewed lunar flyby</strong>
+              </div>
+              <div>
+                <span class="stat-kicker">Duration</span>
+                <strong id="missionDuration">9 days</strong>
+              </div>
+              <div>
+                <span class="stat-kicker">Why it matters</span>
+                <strong id="missionImpact">Validates systems for future lunar operations</strong>
+              </div>
+            </div>
+
+            <div class="meter">
+              <div class="meter-track">
+                <div class="meter-fill" id="meterFill"></div>
+              </div>
+              <div class="meter-labels">
+                <span>Program momentum</span>
+                <span id="meterValue">74%</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </header>
+
+    <main class="shell">
+      <section class="quick-stats reveal">
+        <div class="section-head">
+          <p class="eyebrow">At a glance</p>
+          <h2>Simple details, current mission context</h2>
+        </div>
+
+        <div class="cards">
+          <article class="mini-card">
+            <span class="mini-label">Current focus</span>
+            <strong>Moon first, Mars next</strong>
+            <p>Artemis is designed to build experience for longer human exploration missions.</p>
+          </article>
+          <article class="mini-card">
+            <span class="mini-label">Recent milestone</span>
+            <strong>Artemis II flew in April 2026</strong>
+            <p>The crewed lunar flyby followed the uncrewed Artemis I mission from 2022.</p>
+          </article>
+          <article class="mini-card">
+            <span class="mini-label">Next major mission</span>
+            <strong>Artemis III targets 2027</strong>
+            <p>NASA's mission page describes Artemis III as testing integrated operations in low Earth orbit.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="missions reveal" id="missions">
+        <div class="section-head">
+          <p class="eyebrow">Interactive timeline</p>
+          <h2>Tap a mission to update the live panel</h2>
+        </div>
+
+        <div class="timeline" role="tablist" aria-label="Artemis missions">
+          <button class="timeline-item active" data-mission="artemis1" role="tab" aria-selected="true">
+            <span>2022</span>
+            <strong>Artemis I</strong>
+            <small>Uncrewed Moon test flight</small>
+          </button>
+          <button class="timeline-item" data-mission="artemis2" role="tab" aria-selected="false">
+            <span>2026</span>
+            <strong>Artemis II</strong>
+            <small>First crewed Artemis mission</small>
+          </button>
+          <button class="timeline-item" data-mission="artemis3" role="tab" aria-selected="false">
+            <span>2027</span>
+            <strong>Artemis III</strong>
+            <small>Integrated operations test</small>
+          </button>
+        </div>
+      </section>
+
+      <section class="controls-grid reveal">
+        <article class="panel">
+          <div class="section-head compact">
+            <p class="eyebrow">Explore the stack</p>
+            <h2>Mission systems</h2>
+          </div>
+
+          <div class="chip-row" id="systemChips">
+            <button class="chip active" data-system="orion">Orion</button>
+            <button class="chip" data-system="sls">SLS</button>
+            <button class="chip" data-system="lander">Lander</button>
+            <button class="chip" data-system="gateway">Gateway</button>
+          </div>
+
+          <div class="detail-box">
+            <h3 id="systemTitle">Orion spacecraft</h3>
+            <p id="systemText">
+              Orion is the crew vehicle built to carry astronauts to the Moon and back safely.
+            </p>
+          </div>
+        </article>
+
+        <article class="panel">
+          <div class="section-head compact">
+            <p class="eyebrow">Interactive feature</p>
+            <h2>Mission readiness slider</h2>
+          </div>
+
+          <label class="slider-wrap" for="readiness">
+            <span>How ready does the campaign feel to you?</span>
+            <input id="readiness" type="range" min="10" max="100" value="74" />
+          </label>
+          <p class="slider-output" id="readinessOutput">74% - strong forward momentum</p>
+        </article>
+      </section>
+
+      <section class="faq reveal">
+        <div class="section-head">
+          <p class="eyebrow">Quick answers</p>
+          <h2>Three simple Artemis questions</h2>
+        </div>
+
+        <div class="faq-list">
+          <details>
+            <summary>What is Artemis trying to do?</summary>
+            <p>NASA says Artemis aims to return humans to the Moon, enable scientific discovery, and prepare for future Mars missions.</p>
+          </details>
+          <details>
+            <summary>What happened most recently?</summary>
+            <p>According to NASA mission pages, Artemis II launched on April 1, 2026 and completed a crewed lunar flyby.</p>
+          </details>
+          <details>
+            <summary>What comes after Artemis II?</summary>
+            <p>NASA's Artemis III page currently lists a 2027 mission focused on integrated operations with commercial systems.</p>
+          </details>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="shell footer reveal">
+      <p>
+        Content summarized from NASA official pages last updated in early 2026:
+        <a href="https://www.nasa.gov/artemis" target="_blank" rel="noreferrer">Artemis overview</a>,
+        <a href="https://www.nasa.gov/mission/artemis-ii" target="_blank" rel="noreferrer">Artemis II</a>,
+        <a href="https://www.nasa.gov/mission/artemis-iii" target="_blank" rel="noreferrer">Artemis III</a>.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

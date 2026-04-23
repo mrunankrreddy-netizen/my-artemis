@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artemis II | Mission Article</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="article-page">
+    <div class="page-switcher">
+      <label class="switcher-label" for="pageSelect">Articles</label>
+      <select id="pageSelect" class="page-select">
+        <option value="index.html">Home overview</option>
+        <option value="artemis1.html">Artemis I article</option>
+        <option value="artemis2.html" selected>Artemis II article</option>
+        <option value="artemis3.html">Artemis III article</option>
+      </select>
+    </div>
+
+    <main class="shell article-layout">
+      <article class="article-card article-card-full reveal">
+        <span class="article-tag">Artemis II</span>
+        <h1 class="article-title">The first crewed Artemis flight brought people back onto the path to the Moon.</h1>
+        <p class="article-lede">
+          Artemis II launched on April 1, 2026 and carried four astronauts on a crewed lunar flyby,
+          making it NASA's first crewed mission around the Moon in more than 50 years.
+        </p>
+        <figure class="article-media">
+          <video class="article-video" controls muted loop playsinline preload="metadata" src="assets/artemis-liftoff.mp4#t=0,8"></video>
+          <figcaption>This mission article uses launch footage so the page feels tied to the real flight, not just a summary.</figcaption>
+        </figure>
+        <div class="article-stats">
+          <div class="article-stat"><span>Launch</span><strong>April 1, 2026</strong></div>
+          <div class="article-stat"><span>Crew</span><strong>4 astronauts</strong></div>
+          <div class="article-stat"><span>Duration</span><strong>10 days</strong></div>
+        </div>
+        <section class="article-explorer">
+          <div class="chip-row">
+            <button class="chip explorer-button active" data-title-target="a2Title" data-body-target="a2Body" data-panel-title="Crewed systems check" data-panel-body="Artemis II validated life support, crew procedures, timing, and deep-space operations under real mission conditions instead of simulation alone.">Crewed systems</button>
+            <button class="chip explorer-button" data-title-target="a2Title" data-body-target="a2Body" data-panel-title="Why it was symbolic" data-panel-body="The mission marked NASA's first crewed trip around the Moon in more than half a century, which made it both a technical and historic turning point.">Historic step</button>
+            <button class="chip explorer-button" data-title-target="a2Title" data-body-target="a2Body" data-panel-title="Why it reduced risk" data-panel-body="Artemis II let NASA observe how astronauts interact with Orion, mission timelines, and deep-space systems in flight before more integrated future operations.">Risk reduction</button>
+          </div>
+          <div class="detail-box">
+            <h3 id="a2Title">Crewed systems check</h3>
+            <p id="a2Body">Artemis II validated life support, crew procedures, timing, and deep-space operations under real mission conditions instead of simulation alone.</p>
+          </div>
+        </section>
+        <div class="article-body">
+          <p>
+            Artemis II was not just a repeat of Artemis I with people on board. It was the moment the
+            entire program had to prove that deep-space systems, crew procedures, life support, timing,
+            communications, and mission operations could all work together under real conditions.
+          </p>
+          <p>
+            That made Artemis II a bridge mission. It linked the engineering proof from Artemis I with
+            the more integrated exploration missions NASA wants next. Every successful crew operation,
+            every systems check, and every return milestone helped reduce risk for future lunar
+            campaigns.
+          </p>
+          <p>
+            In practical terms, Artemis II showed the Artemis architecture was no longer just hardware
+            in development. It had become an operating human spaceflight system.
+          </p>
+        </div>
+      </article>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
